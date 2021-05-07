@@ -19,3 +19,6 @@ There are also other sources that are tracking them (undocumented), here are a f
 
  * [SteamTracking's URL List](https://github.com/SteamDatabase/SteamTracking/blob/master/ClientExtracted/public/url_list.txt)
  * [SteamTracking's JavaScript Collection](https://github.com/SteamDatabase/SteamTracking/tree/master/store.steampowered.com/public/javascript)
+
+## License
+[MIT License](https://github.com/Revadike/UnofficialSteamWebAPI/blob/master/LICENSE)
