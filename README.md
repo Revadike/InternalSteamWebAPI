@@ -1,4 +1,4 @@
-# Unofficial Steam Web API
+# Unofficial Steam Web API Documentation
 [Documenting the unofficial and internal Steam Web API](https://github.com/Revadike/UnofficialSteamWebAPI/wiki)
 
 ## Official API
@@ -9,13 +9,13 @@ If you are interested in that, I recommend this lovely [Steam Web API Documentat
 **WE NEED YOUR HELP!**
 
 Because of the nature of this kind of API, we desparately seek contributions to the [wiki](https://github.com/Revadike/UnofficialSteamWebAPI/wiki) to keep the documentation updated and complete!
-If this documentation was helpful to you in any way, please consider taking a few minutes to add a new wiki entry or update an existing one. Also, a [☆ Star](https://github.com/Revadike/UnofficialSteamWebAPI/stargazers) is much appreciated!
+If this documentation was helpful to you in any way, please consider taking a few minutes to add a new wiki entry or update an existing one (look out for `TODO`). Also, a [☆ Star](https://github.com/Revadike/UnofficialSteamWebAPI/stargazers) is much appreciated!
 
 ## Generation
 This JavaScript code may help you generate parts of the API documentation:
  * Response:
 ```js
-console.log(Object.entries(JSON.parse(document.body.innerText)).map(([key, value]) =>  `> | \`${key}\` | ${typeof value} | \`TODO\` |`).join("\n"));
+console.log(Object.entries(JSON.parse(document.body.innerText)).map(([key, value]) =>  `> | \`${key}${Array.isArray(value) ? "[]" : ""}\` | ${Array.isArray(value) ? "array" : typeof value} | \`TODO\` |`).join("\n"));
 ```
  * Example:
 ```js
