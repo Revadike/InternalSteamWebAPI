@@ -1,4 +1,4 @@
-# Unofficial Steam Web API Documentation
+# 📄 Unofficial Steam Web API Documentation
 > Documenting the unofficial and internal Steam Web API
 
 [ACCESS HERE](https://github.com/Revadike/UnofficialSteamWebAPI/wiki)
