@@ -1,7 +1,12 @@
 # 📄 Unofficial Steam Web API Documentation
 > Documenting the unofficial and internal Steam Web API
 
-[ACCESS HERE](https://github.com/Revadike/UnofficialSteamWebAPI/wiki)
+
+<div align="center">
+  <hr />
+  <b><a href="https://github.com/Revadike/UnofficialSteamWebAPI/wiki">ACCESS HERE</a></b>
+  <hr />
+</div>
 
 ## Official API
 This [wiki](https://github.com/Revadike/UnofficialSteamWebAPI/wiki) is **not** intended to list or document any "official" API that typically use an [API key](https://steamcommunity.com/dev/apikey), including the public Steamworks Web API that is hosted on `https://api.steampowered.com` or `https://community.steam-api.com`. 
