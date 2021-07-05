@@ -23,7 +23,7 @@ console.log(JSON.stringify(JSON.parse(document.body.innerText), null, 4));
 ```
 
 ## Sources
-Most of these unofficial API endpoints can be found by [reverse engineering](https://en.wikipedia.org/wiki/Reverse_engineering). Check out [this tutorial](https://developer.chrome.com/docs/devtools/network/) by @Google.
+Most of these unofficial API endpoints can be found by [reverse engineering](https://en.wikipedia.org/wiki/Reverse_engineering). Check out [this tutorial](https://developer.chrome.com/docs/devtools/network/) by [@Google](https://github.com/google).
 
 There are also other sources that are tracking them (undocumented), here are a few of them:
 
