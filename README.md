@@ -20,6 +20,7 @@ If this documentation was helpful to you in any way, please consider taking a fe
 
 ## Generation
 [This JavaScript script](https://github.com/Revadike/UnofficialSteamWebAPI/blob/master/generate_docs.js) may help you generate a proposal of the API documentation of an endpoint.
+Unfortunately, it is not able to detect variables (such as appids and steamids), you have to correct this manually.
 
 ## Sources
 Most of these unofficial API endpoints can be found by [reverse engineering](https://en.wikipedia.org/wiki/Reverse_engineering). Check out [this tutorial](https://developer.chrome.com/docs/devtools/network/) by [@Google](https://github.com/google).
