@@ -7,9 +7,6 @@ function generateDocs() {
     let url = new URL(location.href);
 
     function buildDocs(json, extraCols, prefix) {
-        if (Array.isArray(json) && json.length > 0) {
-            return buildDocs(json[0], extraCols, "[]");
-        }
         let text = "";
         let todo = new Array(extraCols).fill(` \`TODO\` |`).join("");
         for (let [key, value] of Object.entries(json)) {
@@ -32,7 +29,12 @@ function generateDocs() {
         params[key] = value;
     }
     let paramDocs = buildDocs(params, 2, "");
-    let responseDocs = buildDocs(json, 1, "");
+    let responseDocs = "";
+    if (Array.isArray(json) && json.length > 0) {
+        responseDocs = buildDocs(json[0], extraCols, "[]");
+    } else {
+        responseDocs = buildDocs(json, 1, "");
+    }
     let output = `# GET ${url.pathname}
 
 ## Rate limits
