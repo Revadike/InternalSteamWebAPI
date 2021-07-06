@@ -8,7 +8,7 @@ function generateDocs() {
 
     function buildDocs(json, extraCols, prefix) {
         if (Array.isArray(json) && json.length > 0) {
-            return buildDocs(json[0], "[]");
+            return buildDocs(json[0], extraCols, "[]");
         }
         let text = "";
         let todo = new Array(extraCols).fill(` \`TODO\` |`).join("");
