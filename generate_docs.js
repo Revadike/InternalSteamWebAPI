@@ -9,7 +9,6 @@ function generateDocs() {
     function buildDocs(json, extraCols, prefix) {
         let text = "";
         let todo = new Array(extraCols).fill(` \`TODO\` |`).join("");
-        console.log({json, prefix});
         for (let [key, value] of Object.entries(json)) {
             let name = `${prefix}${key}${Array.isArray(value) ? "[]" : ""}`;
             text += `> | \`${name}\` | ${
