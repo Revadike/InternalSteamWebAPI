@@ -9,6 +9,7 @@ function generateDocs() {
     function buildDocs(json, extraCols, prefix) {
         let text = "";
         let todo = new Array(extraCols).fill(` \`TODO\` |`).join("");
+        console.log({json, prefix});
         for (let [key, value] of Object.entries(json)) {
             let name = `${prefix}${key}${Array.isArray(value) ? "[]" : ""}`;
             text += `> | \`${name}\` | ${
@@ -16,8 +17,7 @@ function generateDocs() {
             } |${todo}\n`;
             if (Array.isArray(value) && value.length > 0) {
                 text += buildDocs(value[0], extraCols, name + ".");
-            }
-            if (typeof value === "object") {
+            } else if (typeof value === "object") {
                 text += buildDocs(value, extraCols, name + ".");
             }
         }
@@ -31,7 +31,7 @@ function generateDocs() {
     let paramDocs = buildDocs(params, 2, "");
     let responseDocs = "";
     if (Array.isArray(json) && json.length > 0) {
-        responseDocs = buildDocs(json[0], extraCols, "[]");
+        responseDocs = buildDocs(json[0], 1, "[]");
     } else {
         responseDocs = buildDocs(json, 1, "");
     }
