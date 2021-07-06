@@ -19,15 +19,7 @@ Because of the nature of this kind of API, we desparately seek contributions to 
 If this documentation was helpful to you in any way, please consider taking a few minutes to add a new wiki entry or update an existing one (look out for `TODO`). Also, a [☆ Star](https://github.com/Revadike/UnofficialSteamWebAPI/stargazers) is much appreciated!
 
 ## Generation
-This JavaScript code may help you generate parts of the API documentation:
- * Response:
-```js
-console.log(Object.entries(JSON.parse(document.body.innerText)).map(([key, value]) =>  `> | \`${key}${Array.isArray(value) ? "[]" : ""}\` | ${Array.isArray(value) ? "array" : typeof value} | \`TODO\` |`).join("\n"));
-```
- * Example:
-```js
-console.log(JSON.stringify(JSON.parse(document.body.innerText), null, 4));
-```
+[This JavaScript script](https://github.com/Revadike/UnofficialSteamWebAPI/blob/master/generate_docs.js) may help you generate a proposal of the API documentation of an endpoint.
 
 ## Sources
 Most of these unofficial API endpoints can be found by [reverse engineering](https://en.wikipedia.org/wiki/Reverse_engineering). Check out [this tutorial](https://developer.chrome.com/docs/devtools/network/) by [@Google](https://github.com/google).
