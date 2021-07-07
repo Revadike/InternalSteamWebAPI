@@ -1,0 +1,34 @@
+{
+    "name": "unofficial-steam-web-api",
+    "description": "Documenting the unofficial and internal Steam Web API",
+    "version": "1.0.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Revadike/UnofficialSteamWebAPI"
+    },
+    "author": "Revadike <revadike@outlook.com> (https://revadike.com)",
+    "license": "MIT",
+    "scripts": {
+        "build": "gwtc -t \"Unofficial Steam Web API Documentation\" ../UnofficialSteamWebAPI.wiki",
+        "build:alt": "gwtc -t \"Unofficial Steam Web API Documentation\" --logo-img ./logo.png --highlight-theme vs2015 ../UnofficialSteamWebAPI.wiki"
+    },
+    "keywords": [
+        "api",
+        "api-docs",
+        "api-documentation",
+        "docs",
+        "documentation",
+        "reverse-engineering",
+        "steam",
+        "steam-api",
+        "steamapi",
+        "steampowered",
+        "web-api",
+        "webapi",
+        "wiki"
+    ],
+    "devDependencies": {
+        "github-wikito-converter": "latest"
+    },
+    "homepage": "https://github.com/Revadike/UnofficialSteamWebAPI/wiki"
+}
