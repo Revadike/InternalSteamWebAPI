@@ -30,15 +30,13 @@ function generateDocs() {
     let paramDocs = buildDocs(params, 2, "");
     let responseDocs = "";
     if (Array.isArray(json) && json.length > 0) {
-        responseDocs = buildDocs(json[0], 1, "[]");
+        responseDocs = `> | \`[]\` | array | \`TODO\` |\n${buildDocs(json[0], 1, "[]")}`;
     } else {
         responseDocs = buildDocs(json, 1, "");
     }
     let output = `# GET ${url.pathname}
-
 ## Rate limits
 > *No known rate limit*
-
 ## Request
 > **Authenticated**: \`TODO\`
 > 
@@ -52,13 +50,11 @@ function generateDocs() {
 > | **Name** | **Type** | **Required** | **Description** |
 > |:---|:---|:---|:---|
 ${paramDocs}
-
 ## Response
 > ### 200 OK
 > | **Name** | **Type** | **Description** |
 > |:---|:---|:---|
 ${responseDocs}
-
 ## Example
 \`\`\`
 GET ${url.href}
