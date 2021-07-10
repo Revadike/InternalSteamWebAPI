@@ -16,7 +16,7 @@ function generateDocs() {
             } |${todo}\n`;
             if (Array.isArray(value) && value.length > 0) {
                 text += buildDocs(value[0], extraCols, name + ".");
-            } else if (typeof value === "object") {
+            } else if (typeof value === "object" && value !== null) {
                 text += buildDocs(value, extraCols, name + ".");
             }
         }
