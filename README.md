@@ -1,4 +1,4 @@
-# 📄 Unofficial Steam Web API Documentation
+# 📄 Internal Steam Web API Documentation
 > Documenting the unofficial and internal Steam Web API
 
 
