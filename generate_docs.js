@@ -14,7 +14,15 @@ function generateDocs(json, url, authed = null) {
             text += `> | \`${name}\` | ${Array.isArray(value) ? "array" : typeof value
                 } |${todo}\n`;
             if (Array.isArray(value) && value.length > 0) {
-                text += buildDocs(value[0], extraCols, name + ".");
+                if (value.every(v => v instanceof Object)) {
+                    let combined = {};
+                    for (let item of value) {
+                        combined = Object.assign(combined, item);
+                    }
+                    text += buildDocs(combined, extraCols, name + ".");
+                } else {
+                    text += buildDocs(value[0], extraCols, name + ".");
+                }
             } else if (typeof value === "object" && value !== null) {
                 text += buildDocs(value, extraCols, name + ".");
             }
@@ -28,7 +36,7 @@ function generateDocs(json, url, authed = null) {
     }
     let paramDocs = buildDocs(params, 2, "");
     let responseDocs = "";
-    
+
     if (Array.isArray(json) && json.length > 0) {
         responseDocs = `> | \`[]\` | array | \`TODO\` |\n${buildDocs(json[0], 1, "[]")}`;
     } else {
