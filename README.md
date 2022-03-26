@@ -26,8 +26,8 @@ Most of these unofficial API endpoints can be found by [reverse engineering](htt
 
 There are also other sources that are tracking them (undocumented), here are a few of them:
 
- * [SteamTracking's URL List](https://github.com/SteamDatabase/SteamTracking/blob/master/ClientExtracted/public/url_list.txt)
- * [SteamTracking's JavaScript Collection](https://github.com/SteamDatabase/SteamTracking/tree/master/store.steampowered.com/public/javascript)
+ * [SteamTracking's Client URL List](https://github.com/SteamDatabase/SteamTracking/blob/master/ClientExtracted/public/url_list.txt)
+ * [SteamTracking's JavaScript URL List](https://github.com/SteamDatabase/SteamTracking/blob/master/API/JavascriptUrls.txt)
 
 ## License
 [MIT License](https://github.com/Revadike/UnofficialSteamWebAPI/blob/master/LICENSE)
